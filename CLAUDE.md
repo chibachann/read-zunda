@@ -13,16 +13,15 @@
 - `main` ブランチへの直接コミットは禁止
 - 機能追加・修正は必ずブランチを切って開発する
 - ブランチ命名規則: `feature/機能名`（例: `feature/research-module`）
-- 開発完了後は `main` へマージする
+- **マージは人間が最終確認・承認してから行う**
+- Claude はブランチへのコミット・プッシュまでを担当し、マージは人間が指示した場合のみ実行する
 
 ```bash
 # ブランチ作成
 git checkout -b feature/機能名
 
-# 開発完了後
-git checkout main
-git merge feature/機能名
-git push origin main
+# 実装完了後：コミット＆プッシュまで行い、マージは人間に確認する
+git push origin feature/機能名
 ```
 
 ---

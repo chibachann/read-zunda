@@ -1,1 +1,6 @@
 .env
+__pycache__/
+*.pyc
+output/docs/*.md
+output/audio/*.wav
+/tmp/*.wav
